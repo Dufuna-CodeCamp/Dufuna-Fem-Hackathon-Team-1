@@ -1,0 +1,164 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard_container{
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar_container {
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    left: 0;
+    background: #130f40;
+    color: #fff;
+  }
+    
+.headtitle {
+    padding: 10px 15px 10px 50px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    border-bottom: 1px solid #fff;
+    text-transform: uppercase;
+  }
+  
+  .menu_list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: relative;
+  }
+  
+  .menu_list li {
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+    padding: 20px 0px;
+  }
+  
+  .menu_list li a {
+    padding: 10px 15px 10px 30px;
+    display: block;
+    color: #fff;
+  }
+  
+  .menu_list li .fa {
+    margin-right: 10px;
+  }
+  
+  .menu_list a:active,
+  .menu_list li a:hover,
+  .menu_list li a:focus {
+    text-decoration: none;
+    outline: none;
+  }
+  
+  .menu_list li::before {
+    background-color: #2574A9;
+    position: absolute;
+    content: '';
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-transition: width 0.2s ease-in;
+    transition: width 0.2s ease-in;
+    width: 3px;
+    z-index: -1;
+  }
+  
+  .menu_list li:hover::before {
+    width: 100%;
+  }
+  
+  .menu_list .header {
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: #151515;
+    padding: 10px 15px 10px 30px;
+  }
+  
+  .menu_list .header::before {
+    background-color: transparent;
+  }
+  
+.mainbody_container{
+        width: 75%;
+        background-color: #f4f6f9;
+        margin-left: 330px;
+  }
+  
+.dashboard_topnav{
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 50px;
+  }
+
+  .dashboard_topnav a{
+      color: #2c3e50;
+      text-decoration: none;
+      font-size: 20px;
+}
+
+#logoutBtn{
+    float: right;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+}
+
+/******************** Category***********************************/
+.category-table{
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin: 40px auto;
+    padding: 20px;
+    width: 90%;
+    height: 100vh;
+
+}
+
+.category_title{
+    margin-bottom: 20px;
+}
+
+.category_title span{
+    color:#130f40 ;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+.category_title button{
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 40px;
+
+}
+
+.modal{
+    padding: 100px 900px 100px 900px;
+    justify-content: center;
+}
+
+.modal_btn{
+    padding: 20px;
+
+}
+
+#editbtn{
+    float: right;
+}
