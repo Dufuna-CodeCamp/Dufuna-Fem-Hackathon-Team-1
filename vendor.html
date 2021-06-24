@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category</title>
+    <title>Vendor</title>
     <link rel="stylesheet" href="ims.css">
     <link rel="icon" href="images/favicon2.svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha256-T/zFmO5s/0aSwc6ics2KLxlfbewyRz6UNw1s3Ppf5gE=" crossorigin="anonymous">
@@ -48,21 +48,25 @@
               <!--rightside Content section-->
               <div class="category-table" id="category_container">
                   <div class="category_title">
-                      <span>Category 
+                      <span>Vendor
                           <button class="btn btn-dark" type="button" data-toggle="modal" data-target="#addCategory">
                               +
                           </button>
                       </span>
                   </div>
-                        <!--form to add new category-->
+                        <!--form to Add a new Vendor -->
                   <form action="" method="POST" target="" id="addCategory" class="modal" aria-labelledby="addCategory" aria-hidden="true" tabindex="-1">
                       <div class="modal-dialogue">
                           <div class="modal-content">
                               <div class="modal-body">
                                   <label>Name</label>
-                                  <input type="text" id="firstname" class="form-control">
-                                  <label>Quantity</label>
-                                  <input type="text" id="lastname" class="form-control">
+                                  <input type="text" id="name" class="form-control">
+                                  <label>Address</label>
+                                  <input type="text" id="address" class="form-control">
+                                  <label>Phone No</label>
+                                  <input type="number" id="phoneno" class="form-control">
+                                  <label>Email</label>
+                                  <input type="email" id="email" class="form-control">
                               </div>
                               <div class="modal_btn">
                                   <button type="button" class="btn btn-danger" data-dismiss="modal"> Cancel</button>
@@ -76,6 +80,9 @@
                           <tr>
                               <th scope="col"><a href=""></a> S/N </th>
                               <th scope="col"><a href=""></a> Name </th>
+                              <th scope="col"><a href=""></a> Address </th>
+                              <th scope="col"><a href=""></a> Phone No </th>
+                              <th scope="col"><a href=""></a> Email </th>
                               <th scope="col"><a href=""></a> Action </th>
                           </tr>
                       </thead>
@@ -83,22 +90,34 @@
                           <tr>
                               <td><a href=""></a></td>
                               <td><a href=""></a></td>
+                              <td><a href=""></a></td>
+                              <td><a href=""></a></td>
+                              <td><a href=""></a></td>
                               <td><button type="button" class="btn btn-dark"id="editbtn">Edit</button></td>
                           </tr>
                           <tr>
                             <td><a href=""></a></td>
                             <td><a href=""></a></td>
-                            <td><button type="button" class="btn btn-dark" id="editbtn">Edit</button></td>
+                            <td><a href=""></a></td>
+                            <td><a href=""></a></td>
+                            <td><a href=""></a></td>
+                          <td><button type="button" class="btn btn-dark" id="editbtn">Edit</button></td>
                         </tr>
                         <tr>
                             <td><a href=""></a></td>
                             <td><a href=""></a></td>
-                            <td><button type="button" class="btn btn-dark" id="editbtn">Edit</button></td>
+                            <td><a href=""></a></td>
+                            <td><a href=""></a></td>
+                            <td><a href=""></a></td>
+                          <td><button type="button" class="btn btn-dark" id="editbtn">Edit</button></td>
                         </tr>
                         <tr>
                             <td><a href=""></a></td>
                             <td><a href=""></a></td>
-                            <td><button type="button" class="btn btn-dark" id="editbtn">Edit</button></td>
+                            <td><a href=""></a></td>
+                            <td><a href=""></a></td>
+                            <td><a href=""></a></td>
+                          <td><button type="button" class="btn btn-dark" id="editbtn">Edit</button></td>
                         </tr>
                       </tbody>
                   </table>

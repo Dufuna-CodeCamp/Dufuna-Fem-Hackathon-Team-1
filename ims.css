@@ -7,7 +7,7 @@ body{
     padding: 0;
 }
 
-.dashboard_container{
+.main_container{
     display: flex;
     flex-direction: row;
 }
@@ -29,40 +29,40 @@ body{
     text-transform: uppercase;
   }
   
-  .menu_list {
+.menu_list {
     padding: 0;
     margin: 0;
     list-style-type: none;
     position: relative;
   }
   
-  .menu_list li {
+.menu_list li {
     background-color: transparent;
     position: relative;
     display: inline-block;
     width: 100%;
     line-height: 20px;
-    padding: 20px 0px;
+    padding: 15px 0px;
   }
   
-  .menu_list li a {
+.menu_list li a {
     padding: 10px 15px 10px 30px;
     display: block;
     color: #fff;
   }
   
-  .menu_list li .fa {
+.menu_list li .fa {
     margin-right: 10px;
   }
   
-  .menu_list a:active,
-  .menu_list li a:hover,
-  .menu_list li a:focus {
+.menu_list a:active,
+.menu_list li a:hover,
+.menu_list li a:focus {
     text-decoration: none;
     outline: none;
   }
   
-  .menu_list li::before {
+.menu_list li::before {
     background-color: #2574A9;
     position: absolute;
     content: '';
@@ -75,34 +75,34 @@ body{
     z-index: -1;
   }
   
-  .menu_list li:hover::before {
+.menu_list li:hover::before {
     width: 100%;
   }
   
-  .menu_list .header {
+.menu_list .header {
     font-size: 12px;
     text-transform: uppercase;
     background-color: #151515;
     padding: 10px 15px 10px 30px;
   }
   
-  .menu_list .header::before {
+.menu_list .header::before {
     background-color: transparent;
   }
   
-.mainbody_container{
+.rightPageContent_container{
         width: 75%;
         background-color: #f4f6f9;
         margin-left: 330px;
   }
   
-.dashboard_topnav{
+.topnav{
       background-color: #fff;
       padding: 20px;
       margin-bottom: 50px;
   }
 
-  .dashboard_topnav a{
+.topnav a{
       color: #2c3e50;
       text-decoration: none;
       font-size: 20px;
@@ -112,11 +112,24 @@ body{
     float: right;
 }
 
-.card{
-    display: flex;
-    flex-direction: row;
-    width: 20px;
+.list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 0px 40px 40px 40px; 
 }
+
+.list div{
+  background-color:#ffffff;
+  padding: 20px;
+}
+
+.list p{
+  font-size:18px ;
+  font-weight: bold;
+}
+
 
 /******************** Category***********************************/
 .category-table{
