@@ -1,5 +1,8 @@
 $(function(){
 
+/*=============================================== Homepage ==============================================*/
+
+    // homepage naviation control
 var sideBarIsOpen = true;
 
 toggleBtn.addEventListener( 'click', (event) => {
@@ -30,10 +33,64 @@ toggleBtn.addEventListener( 'click', (event) => {
         sideBarIsOpen = true;
         }
 });
-/*====================== Category ========================*/
+/*=============================================== Category ==============================================*/
 
     $('#formCategory').submit(function(e){
-        console.log('function Test for Category')
+        e.preventDefault();
+        // populating the table to add new details
+        var snCategory = $("input[name='snCategory']");
+        var nameCategory = $("input[name='nameCategory']");
+
+        $('#categoryTable tbody').append(
+            "<tr data-snCategory='"+snCategory+"' data-nameCategory='"+nameCategory+"'>" +
+            "<td>" + $("#snCategory").val() + "</td>" +
+            "<td>" + $("#nameCategory").val() + "</td>" +
+            "<td>" +
+            "<button type='button' class='btn btn-danger btn-lg btn-delete' >" + 
+            "<i class='fa fa-times' aria-hidden='true'></i>" +
+            "</button>" +
+            "<button type='button' class='btn btn-dark btn-lg btn-edit' style='float:right'>" + 
+            'Edit' +
+            "</button>" +
+            "</td>" +
+            "</tr>");
+
+            $('#snCategory').val('');
+            $('#nameCategory').val('');
+
+        // deleting table row
+        $('body').on('click','.btn-delete', function(){
+            $(this).parents('tr').remove();
+        } )
+
+         // editing table row
+         $('body').on('click','.btn-edit', function(){
+            var snCategory=$(this).parents('tr').attr('data-snCategory');
+            var nameCategory =$(this).parents('tr').attr('data-nameCategory');
+                // creating new table when the Edit button is clicked
+            $(this).parents('tr').find('td:eq(0)').html("<input name='edited_number' value=''>");
+            $(this).parents('tr').find('td:eq(1)').html("<input name='edited_name' value=''>");
+
+            $(this).parents('tr').find('td:eq(2)').prepend("<button type='button' class='btn btn-warning mr-5 btn-update'> Update</button>");
+
+            $(this).hide()
+
+                // function for the newly created Update button
+                $('body').on('click','.btn-update', function(){
+                    var snCategory=$(this).parents('tr').find("input[name='edited_number']").val();
+                    var nameCategory=$(this).parents('tr').find("input[name='edited_name']").val();
+
+                    $(this).parents('tr').find('td:eq(0)').text(snCategory)
+                    $(this).parents('tr').find('td:eq(1)').text(nameCategory)
+
+                    $(this).parents('tr').attr('data-snCategory', snCategory)
+                    $(this).parents('tr').attr('data-nameCategory', nameCategory)
+
+                    $(this).parents('tr').find('.btn-edit').show()
+                    $(this).parents('tr').find('.btn-update').remove()
+                })            
+        } )
+        // console.log('function Test for Category')
         // $.ajax({
         //     type: 'POST',
         //     url: '',
@@ -42,8 +99,8 @@ toggleBtn.addEventListener( 'click', (event) => {
         //         console.log('data')
         //     }
         // })
-        e.preventDefault();
     }) 
+ 
 
 
 /*====================== Inventory ========================*/
